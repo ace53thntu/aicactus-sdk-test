@@ -1,0 +1,63 @@
+{
+  "name": "aicactus-sdk-js",
+  "version": "1.0.0",
+  "description": "Aicactus SDK js",
+  "main": "index.js",
+  "repository": "https://github.com/aicactus/aicactus-sdk-js.git",
+  "author": "Em Dinh <ace53thntu@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "yarn build:core && yarn prod",
+    "prod": "cross-env NODE_ENV=production babel-node ./node_modules/webpack/bin/webpack --progress --config webpack.config.prod.js",
+    "build:core": "cd ./libs/analytics.js-core && yarn run build",
+    "dev": "cross-env NODE_ENV=development babel-node ./node_modules/webpack/bin/webpack --progress --config webpack.config.dev.js",
+    "dev:core": "cd ./libs/analytics.js-core && yarn run watch",
+    "build:staging": "yarn build:core && yarn staging",
+    "staging": "cross-env NODE_ENV=staging babel-node ./node_modules/webpack/bin/webpack --progress --config webpack.config.prod.js",
+    "static:js": "cd ./dist && static-server -p 9081 -c \"*\"",
+    "static:html": "cd ./example && static-server -p 9080 -c \"*\"",
+    "mock:api": "cd ./example/mock && json-server --watch db.json --port 3004",
+    "cm": "git-cz"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.10.5",
+    "@babel/core": "7.11.1",
+    "@babel/node": "^7.10.5",
+    "@babel/plugin-proposal-class-properties": "7.10.4",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "7.10.4",
+    "@babel/plugin-proposal-numeric-separator": "7.10.4",
+    "@babel/plugin-proposal-object-rest-spread": "7.11.0",
+    "@babel/plugin-proposal-optional-chaining": "7.11.0",
+    "@babel/plugin-transform-arrow-functions": "7.10.4",
+    "@babel/plugin-transform-modules-umd": "7.10.4",
+    "@babel/plugin-transform-runtime": "7.11.0",
+    "@babel/plugin-transform-template-literals": "7.10.5",
+    "@babel/preset-env": "7.11.0",
+    "@babel/runtime": "7.11.2",
+    "babel-eslint": "10.1.0",
+    "babel-loader": "8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "core-js": "3.6.5",
+    "cross-env": "^7.0.2",
+    "eslint": "7.7.0",
+    "eslint-config-airbnb-base": "14.2.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-loader": "4.0.2",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "git-cz": "4.7.0",
+    "husky": "4.2.5",
+    "prettier": "2.0.5",
+    "terser-webpack-plugin": "^4.1.0",
+    "webpack": "4.44.1",
+    "webpack-cli": "3.3.12"
+  },
+  "dependencies": {
+    "private-parts": "^0.4.1",
+    "regenerator-runtime": "0.13.7"
+  },
+  "husky": {
+    "hooks": {}
+  }
+}

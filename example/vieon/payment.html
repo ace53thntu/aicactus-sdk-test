@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="vi" class="vieon-layout theme-dark">
+
+<head>
+  <title>Mua Gói VIP - VieON</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://static.vieon.vn/vieon-payment/assets/css/ReactToastify.min.css?v=1597412026877">
+  <link rel="stylesheet" href="https://static.vieon.vn/vieon-payment/assets/css/payment.css?v=1597412026877">
+  <link rel="shortcut icon" href="https://ca-global.vieon.vn/ott-vod-global/assets/img/favicon.ico">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <meta name="next-head-count" content="2">
+  <link rel="preload" href="https://static.vieon.vn/vieon-payment/_next/static/HnnZ9_LfpoZy4oPSj3qPk/pages/index.js"
+    as="script">
+  <link rel="preload" href="https://static.vieon.vn/vieon-payment/_next/static/HnnZ9_LfpoZy4oPSj3qPk/pages/_app.js"
+    as="script">
+  <link rel="preload" href="https://static.vieon.vn/vieon-payment/_next/static/runtime/webpack-91b117697e716c22a78b.js"
+    as="script">
+  <link rel="preload" href="https://static.vieon.vn/vieon-payment/_next/static/chunks/framework.8ab6d68b33791ddd3107.js"
+    as="script">
+  <link rel="preload" href="https://static.vieon.vn/vieon-payment/_next/static/chunks/commons.05d2214b01ccf402641b.js"
+    as="script">
+  <link rel="preload"
+    href="https://static.vieon.vn/vieon-payment/_next/static/chunks/d2fa5d65c1271c0701cc2b9fd96b18ee6afaa6a2.3890d355b02b0c63e046.js"
+    as="script">
+  <link rel="preload" href="https://static.vieon.vn/vieon-payment/_next/static/runtime/main-84cba88b662cb351ab5f.js"
+    as="script">
+  <link rel="preload"
+    href="https://static.vieon.vn/vieon-payment/_next/static/chunks/0d16476db2e7e356e6be5e2a1a28ab061b441469.d652d79220e52389f344.js"
+    as="script">
+
+  <script type="text/javascript">
+    // Create a queue to push events and stub all methods
+    window.analytics_aicactus || (window.analytics_aicactus = {});
+    window.analytics_aicactus_queue || (window.analytics_aicactus_queue = []);
+    (function () {
+      let methods = [
+        'trackSubmit',
+        'trackClick',
+        'trackLink',
+        'trackForm',
+        'pageview',
+        'identify',
+        'reset',
+        'group',
+        'track',
+        'ready',
+        'alias',
+        'debug',
+        'page',
+        'once',
+        'off',
+        'on',
+        'addSourceMiddleware',
+        'addIntegrationMiddleware',
+        'setAnonymousId',
+        'addDestinationMiddleware',
+      ];
+
+      let factory = function (method) {
+        return function () {
+          let args = Array.prototype.slice.call(arguments);
+          args.unshift(method);
+          analytics_aicactus_queue.push(args);
+          return window.analytics_aicactus;
+        };
+      };
+
+      for (let i = 0; i < methods.length; i++) {
+        let method = methods[i];
+        window.analytics_aicactus[method] = factory(method);
+      }
+    })();
+
+    // Load analytics.js after everything else
+    analytics_aicactus.load = function (callback) {
+      let script = document.createElement('script');
+      script.async = true;
+      script.type = 'text/javascript';
+
+      // for production
+      // script.src = "https://api.aicactus.io/containers/sdk/v1/b8a3ccf2-5d49-4912-b2cc-87dc46e10277/analytics.min.js"
+
+      // for local
+      script.src = 'http://localhost:9080/analytics.js'; // <--- aicactus analytics
+
+      if (script.addEventListener) {
+        script.addEventListener(
+          'load',
+          function (e) {
+            if (typeof callback === 'function') {
+              callback(e);
+            }
+          },
+          false,
+        );
+      } else {
+        // IE8
+        script.onreadystatechange = function () {
+          if (this.readyState == 'complete' || this.readyState == 'loaded') {
+            callback(window.event);
+          }
+        };
+      }
+      let firstScript = document.getElementsByTagName('script')[0];
+      firstScript.parentNode.insertBefore(script, firstScript);
+    };
+
+    analytics_aicactus.load(function () {
+      analytics_aicactus.initialize();
+      // analytics_aicactus.debug();
+      // set container id before call methods
+      analytics_aicactus.setContainerId('b8a3ccf2-5d49-4912-b2cc-87dc46e10277');
+      analytics_aicactus.callMethodsFromContainer();
+
+      // Loop through the interim analytics queue and reapply the calls to their
+      // proper analytics.js method.
+      while (window.analytics_aicactus_queue.length > 0) {
+        let item = window.analytics_aicactus_queue.shift();
+        let method = item.shift();
+        if (analytics_aicactus[method]) analytics_aicactus[method].apply(analytics_aicactus, item);
+      }
+    });
+  </script>
+
+  
+
+</head>
+
+<body class="App" id="app">
+  <div id="__next">
+    <header class="header" id="header">
+      <div class="top-bar" id="mainNavigation">
+        <div class="top-bar-left flex-box align-middle">
+          <div class="brand brand-header"><a class="logo logo-top" href="https://vieon.vn"
+              title="VieON - Ứng dụng xem Phim và Show ĐỈNH"><img
+                src="https://static.vieon.vn/vieon-payment/assets/img/logo.svg"
+                alt="VieON - Ứng dụng xem Phim và Show ĐỈNH"></a></div>
+          <ul class="menu menu-main dropdown" data-dropdown-menu="v4w9zd-dropdown-menu" data-vertical-class="horizontal"
+            role="menubar">
+            <li role="none"><a class="menu-item vip active" title="Gói dịch vụ" role="menuitem"
+                style="background:linear-gradient(90deg, #ECBD57 0%, #DA9E1C 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent">
+                VIP </a></li>
+          </ul>
+          <ul class="dropdown menu user-nav user-nav-top m-l-auto" data-dropdown-menu="ab40i6-dropdown-menu"
+            data-disable-hover="true" data-click-open="true" data-close-on-click-inside="false" data-alignment="right"
+            data-right-class="align-right" role="menubar">
+            <li class="m-x6"><span class="text-white m-0 hide-for-small-only">Hotline 1800599920</span></li>
+            <li class="is-dropdown-submenu-parent m-l2 opens-left" role="none"><a class="link" title=""
+                role="menuitem"><span class="icon center"><i class="vie vie-user-c-o" aria-hidden="true"></i></span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section section--payment section--payment-method p-t">
+        <div class="container">
+          <div class="section-body">
+            <div class="grid-x align-right">
+              <div class="cell large-auto">
+                <div class="block block--payment block--plan">
+                  <div class="block-header">
+                    <h2 class="title text-black m-0">Chọn gói VIP</h2>
+                  </div>
+                  <div class="block-body">
+                    <blockquote class="for-light">Ưu đãi đặc biệt: Từ 15.6.2020 đến 15.8.2020, tặng thêm 3 tháng khi mua
+                      gói bất kỳ (chỉ áp dụng cho lần đầu tiên thanh toán)
+                      <a class="link" href="https://vieon.vn/cau-hoi-thuong-gap" title="Tìm hiểu thêm"
+                        target="_blank">Tìm hiểu thêm</a></blockquote>
+                    <div class="grid-x grid-margin-x4">
+                      <div class="cell large-3">
+                        <div class="card card--plan active">
+                          <div class="card-section"><span class="text text-best-deal text-gold absolute">Ưu đãi tốt
+                              nhất</span>
+                            <h4>Tự động gia hạn hàng tháng</h4>
+                            <div class="grid-x grid-margin-x4 align-justify">
+                              <div class="cell shrink medium-12">
+                                <div class="price price--fixed grid-x">
+                                  <div class="cell shrink medium-12">
+                                    <div class="price-item p-r1"><span class="text text-green">49.000đ/tháng</span>
+                                    </div>
+                                  </div>
+                                  <div class="cell auto medium-12"></div>
+                                </div>
+                              </div>
+                              <div class="cell shrink medium-12">
+                                <hr class="border-bottom hide-for-small-only">
+                                <div class="promotion promotion--plus text-uppercase"><span class="text text-gold">+
+                                    tặng 3 tháng</span></div>
+                              </div>
+                            </div>
+                          </div><label class="tags tags--promotion medium tags-gold-gradient-st1 absolute text-white"><i
+                              class="vie vie-arrow-long-left m-r1"></i>25%</label>
+                        </div>
+                      </div>
+                      <div class="cell large-3">
+                        <div class="card card--plan">
+                          <div class="card-section"><span class="text text-best-deal text-gold absolute"></span>
+                            <h4>01 Tháng</h4>
+                            <div class="grid-x grid-margin-x4 align-justify">
+                              <div class="cell shrink medium-12">
+                                <div class="price price--fixed grid-x">
+                                  <div class="cell shrink medium-12">
+                                    <div class="price-item p-r1"><span class="text text-green">66.000đ/tháng</span>
+                                    </div>
+                                  </div>
+                                  <div class="cell auto medium-12"></div>
+                                </div>
+                              </div>
+                              <div class="cell shrink medium-12">
+                                <hr class="border-bottom hide-for-small-only">
+                                <div class="promotion promotion--plus text-uppercase"><span class="text text-gold">+
+                                    tặng 3 tháng</span></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cell large-3">
+                        <div class="card card--plan">
+                          <div class="card-section"><span class="text text-best-deal text-gold absolute"></span>
+                            <h4>03 Tháng</h4>
+                            <div class="grid-x grid-margin-x4 align-justify">
+                              <div class="cell shrink medium-12">
+                                <div class="price price--fixed grid-x">
+                                  <div class="cell shrink medium-12">
+                                    <div class="price-item p-r1"><span class="text text-green">179.000đ
+                                        (~60.000đ/tháng)</span></div>
+                                  </div>
+                                  <div class="cell auto medium-12"></div>
+                                </div>
+                              </div>
+                              <div class="cell shrink medium-12">
+                                <hr class="border-bottom hide-for-small-only">
+                                <div class="promotion promotion--plus text-uppercase"><span class="text text-gold">+
+                                    tặng 3 tháng</span></div>
+                              </div>
+                            </div>
+                          </div><label class="tags tags--promotion medium tags-gold-gradient-st1 absolute text-white"><i
+                              class="vie vie-arrow-long-left m-r1"></i>10%</label>
+                        </div>
+                      </div>
+                      <div class="cell large-3">
+                        <div class="card card--plan">
+                          <div class="card-section"><span class="text text-best-deal text-gold absolute"></span>
+                            <h4>12 Tháng</h4>
+                            <div class="grid-x grid-margin-x4 align-justify">
+                              <div class="cell shrink medium-12">
+                                <div class="price price--fixed grid-x">
+                                  <div class="cell shrink medium-12">
+                                    <div class="price-item p-r1"><span class="text text-green">629.000đ
+                                        (~53.000đ/tháng)</span></div>
+                                  </div>
+                                  <div class="cell auto medium-12"></div>
+                                </div>
+                              </div>
+                              <div class="cell shrink medium-12">
+                                <hr class="border-bottom hide-for-small-only">
+                                <div class="promotion promotion--plus text-uppercase"><span class="text text-gold">+
+                                    tặng 3 tháng</span></div>
+                              </div>
+                            </div>
+                          </div><label class="tags tags--promotion medium tags-gold-gradient-st1 absolute text-white"><i
+                              class="vie vie-arrow-long-left m-r1"></i>20%</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="block block--payment block--payment-method">
+                  <div class="block-header">
+                    <h2 class="title text-black m-0">Chọn phương thức thanh toán</h2>
+                  </div>
+                  <div class="block-body">
+                    <div class="grid-x grid-margin-x4">
+                      <div class="cell auto">
+                        <div class="card card--method active">
+                          <div class="card-section partner-credit">
+                            <div class="thumbnail"><img
+                                src="https://static.vieon.vn/vieon-payment/assets/img/banks/credit_card.svg"
+                                alt="Thẻ Thanh Toán Quốc Tế (VISA/Master)"></div>
+                            <h4 class="size-w-full text-center m-b0 hide-for-small-only">Thẻ Thanh Toán Quốc Tế
+                              (VISA/Master)</h4>
+                          </div>
+                          <h4 class="size-w-full text-center m-b0 hide-for-medium">Thẻ Thanh Toán Quốc Tế (VISA/Master)
+                          </h4>
+                        </div>
+                      </div>
+                      <div class="cell auto">
+                        <div class="card card--method disabled">
+                          <div class="card-section partner-vnpay">
+                            <div class="thumbnail"><img
+                                src="https://static.vieon.vn/vieon-payment/assets/img/banks/vnpay.svg"
+                                alt="Cổng thanh toán VNPAY"></div>
+                            <h4 class="size-w-full text-center m-b0 hide-for-small-only">Cổng thanh toán VNPAY</h4>
+                          </div>
+                          <h4 class="size-w-full text-center m-b0 hide-for-medium">Cổng thanh toán VNPAY</h4>
+                        </div>
+                      </div>
+                      <div class="cell auto">
+                        <div class="card card--method disabled">
+                          <div class="card-section partner-momo">
+                            <div class="thumbnail"><img
+                                src="https://static.vieon.vn/vieon-payment/assets/img/banks/momo.svg"
+                                alt="Ví Điện Tử MoMo"></div>
+                            <h4 class="size-w-full text-center m-b0 hide-for-small-only">Ví Điện Tử MoMo</h4>
+                          </div>
+                          <h4 class="size-w-full text-center m-b0 hide-for-medium">Ví Điện Tử MoMo</h4>
+                        </div>
+                      </div>
+                      <div class="cell auto">
+                        <div class="card card--method disabled">
+                          <div class="card-section partner-moca">
+                            <div class="thumbnail"><img
+                                src="https://static.vieon.vn/vieon-payment/assets/img/banks/moca_blue.svg"
+                                alt="Ví Moca trên ứng dụng Grab"></div>
+                            <h4 class="size-w-full text-center m-b0 hide-for-small-only">Ví Moca trên ứng dụng Grab</h4>
+                          </div>
+                          <h4 class="size-w-full text-center m-b0 hide-for-medium">Ví Moca trên ứng dụng Grab</h4>
+                        </div>
+                      </div>
+                      <div class="cell auto">
+                        <div class="card card--method disabled">
+                          <div class="card-section partner-mobifone">
+                            <div class="thumbnail"><img
+                                src="https://static.vieon.vn/vieon-payment/assets/img/banks/mobifone.svg"
+                                alt="Tin nhắn SMS"></div>
+                            <h4 class="size-w-full text-center m-b0 hide-for-small-only">Tin nhắn SMS</h4>
+                          </div>
+                          <h4 class="size-w-full text-center m-b0 hide-for-medium">Tin nhắn SMS</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="block block--payment block--payment-bank m-b3 hide">
+                  <div class="block-body">
+                    <div class="list list--bank">
+                      <div class="grid-x grid-margin-x4 small-up-4 medium-up-6 large-up-8">
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-7.png" title="ABBANK"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-19.png" title="ACB"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-31.png" title="AGRIBANK"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-11.png" title="BACABANK"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-23.png" title="BIDV"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-15.png" title="DONGABANK"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-27.png" title="EXIMBANK"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-1.png" title="HDBANK"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-5.png" title="IVB"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-9.png" title="MBBANK"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-21.png" title="MSBANK"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-13.png" title="NAMABANK"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-25.png" title="NCB"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-3.png" title="OCB"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-17.png" title="OJB"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-29.png" title="PVCOMBANK"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK.png" title="SACOMBANK"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-4.png" title="SAIGONBANK"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-8.png" title="SCB"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-20.png" title="SHB"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-12.png" title="TECHCOMBANK"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-24.png" title="TPBANK"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-16.png" title="VPBANK"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-28.png" title="SEABANK"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-2.png" title="VIB"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-6.png" title="VIETABANK"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-10.png" title="VIETBANK"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-22.png" title="VIETCAPITALBANK">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-14.png" title="VIETCOMBANK"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-26.png" title="VIETINBANK"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-18.png" title="BIDC"></div>
+                          </div>
+                        </div>
+                        <div class="cell">
+                          <div class="card card--bank">
+                            <div class="card-image ratio-16-9"><img
+                                src="https://static.vieon.vn/vieplay-image/bank/BANK-30.png" title="LAOVIETBANK"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="block block--payment block--payment-credit m-b3">
+                  <div class="block-body">
+                    <form class="form form--payment-card" autocomplete="on">
+                      <div class="grid-x grid-margin-x">
+                        <div class="cell medium-6 large-5"><label>Số thẻ<input id="CARD_NUMBER" type="text"
+                              name="CardNumber" autocomplete="cc-number" placeholder="Nhập số thẻ"
+                              value=""></label><label>Tên chủ thẻ<input id="CARD_NAME" type="text"
+                              placeholder="Nhập tên chủ thẻ" autocomplete="cc-name" value=""></label>
+                          <div class="grid-x">
+                            <div class="small-7 medium-8 cell"><label class="relative">Ngày hết hạn<span
+                                  class="icon absolute right-1 bottom"><i class="vie vie-calendar"></i></span><input
+                                  type="text" placveholder="MM/YY" id="CARD_EXPIRED" autocomplete="cc-exp"
+                                  name="CardExpired" placeholder="MM/YY" value=""></label></div>
+                            <div class="small-5 medium-4 cell"><label class="p-l3">CVV/CVC<input id="CARD_CVV"
+                                  type="password" autocomplete="cc-csc" name="CardCVC" placeholder="CVV/CVC"
+                                  value=""></label></div>
+                          </div>
+                          <fieldset><label class="checkbox-custom" for="rememberLogin"><input type="checkbox"
+                                id="rememberLogin" checked=""><span class="checkmark text-white"></span>Gia hạn tự động
+                              gói VIP để nhận ngay ưu đãi giảm 25% hàng tháng</label></fieldset>
+                        </div>
+                        <div class="cell medium-6 small-order-1 medium-order-2">
+                          <div class="card card--template-credit">
+                            <div class="credit-circuit m-t2"><img
+                                src="https://static.vieon.vn/vieon-payment/assets/img/circuit.svg"></div>
+                            <div class="grid-container m-t3">
+                              <div class="grid-x grid-padding-x small-up-4 align-middle credit-number">
+                                <div class="cell">
+                                  <div class="credit-number-item"><i class="vie vie-circle-solid"></i><i
+                                      class="vie vie-circle-solid"></i><i class="vie vie-circle-solid"></i><i
+                                      class="vie vie-circle-solid"></i></div>
+                                </div>
+                                <div class="cell">
+                                  <div class="credit-number-item"><i class="vie vie-circle-solid"></i><i
+                                      class="vie vie-circle-solid"></i><i class="vie vie-circle-solid"></i><i
+                                      class="vie vie-circle-solid"></i></div>
+                                </div>
+                                <div class="cell">
+                                  <div class="credit-number-item"><i class="vie vie-circle-solid"></i><i
+                                      class="vie vie-circle-solid"></i><i class="vie vie-circle-solid"></i><i
+                                      class="vie vie-circle-solid"></i></div>
+                                </div>
+                                <div class="cell">
+                                  <div class="credit-number-item"><i class="vie vie-circle-solid"></i><i
+                                      class="vie vie-circle-solid"></i><i class="vie vie-circle-solid"></i><i
+                                      class="vie vie-circle-solid"></i></div>
+                                </div>
+                              </div>
+                              <div class="grid-x align-bottom credit-info m-t3">
+                                <div class="cell auto">
+                                  <div class="text text-white">Tên chủ thẻ</div>
+                                </div>
+                                <div class="cell shrink">
+                                  <div class="text text-white">valid thru</div>
+                                  <div class="grid-x align-middle">
+                                    <div class="cell shrink">
+                                      <div class="credit-number-item"><i class="vie vie-circle-solid"></i><i
+                                          class="vie vie-circle-solid"></i></div>
+                                    </div>
+                                    <div class="cell shrink"><span class="text text-white p-x1">/</span></div>
+                                    <div class="cell shrink">
+                                      <div class="credit-number-item"><i class="vie vie-circle-solid"></i><i
+                                          class="vie vie-circle-solid"></i></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="block block--payment block--payment-sms m-b3 hide">
+                  <div class="block-body text-center">
+                    <p class="text m-0">Bạn sẽ chuyển tới màn hình thanh toán của MoMo để hoàn thành việc mua gói VIP
+                    </p>
+                  </div>
+                </div>
+                <div class="block block--payment block--payment-sms m-b3 hide">
+                  <div class="block-body text-center">
+                    <p class="text m-0">Bấm nút Thanh toán, sau đó quét mã QR được hiển thị để hoàn thành việc mua gói
+                      VIP</p>
+                  </div>
+                </div>
+              </div>
+              <div class="cell medium-shrink" style="background-color: rgba(204, 204, 204, 0.2);">
+                <div class="block block--bill">
+                  <div class="block-header flex-box align-justify align-middle">
+                    <h2 class="title m-0">Thông tin thanh toán</h2>
+                  </div>
+                  <div class="block-body">
+                    <div class="grid-x m-b2">
+                      <div class="cell shrink"><label>Tên gói</label></div>
+                      <div class="cell auto"><label class="text text-right">Tự động gia hạn hàng tháng</label></div>
+                    </div>
+                    <div class="grid-x m-b2">
+                      <div class="cell shrink"><label>Trị giá</label></div>
+                      <div class="cell auto"><label class="text text-right">66.000đ</label></div>
+                    </div>
+                    <div class="grid-x m-b2">
+                      <div class="cell shrink"><label>Ưu đãi</label></div>
+                      <div class="cell auto"><label class="text text-right" style="color: rgb(218, 158, 28);">4 tháng tự
+                          động gia hạn 49.000đ</label></div>
+                    </div>
+                    <div class="grid-x m-b2">
+                      <div class="cell shrink"><label>Ngày hiệu lực</label></div>
+                      <div class="cell auto"><label class="text text-right">15/08/2020</label></div>
+                    </div>
+                    <div class="grid-x m-b2">
+                      <div class="cell small-5"><label>Kỳ thanh toán tiếp theo</label></div>
+                      <div class="cell small-7"><label class="text text-right">13/12/2020</label></div>
+                    </div>
+                    <div class="grid-x m-b2">
+                      <div class="cell shrink"><label>Sử dụng đến</label></div>
+                      <div class="cell auto"><label class="text text-right">Khi bạn huỷ</label></div>
+                    </div>
+                    <hr class="border-bottom">
+                  </div>
+                  <div class="block-footer">
+                    <div class="price price--temporary">
+                      <div class="grid-x align-middle">
+                        <div class="cell shrink"><span class="text text-black">Thành tiền</span></div>
+                        <div class="cell auto">
+                          <div class="price-total flex-box align-right"><span
+                              class="price-item text-green">49.000đ</span></div>
+                        </div>
+                      </div>
+                    </div><button class="button secondary size-w-full size-h-54 disabled" type="button"
+                      title="Thanh toán" disabled="">Thanh toán</button>
+                    <p class="text text-black text-center size-mw-312 m-x-auto m-t2">Nhấn thanh toán, bạn đồng ý với<a
+                        class="link" href="https://vieon.vn/dieu-khoan-su-dung" title="Điều Khoản Sử Dụng"
+                        target="_blank"> Điều Khoản Sử Dụng</a> &amp;<a class="link"
+                        href="https://vieon.vn/thoa-thuan-va-chinh-sach" title="Thỏa Thuận &amp; Chính Sách"
+                        target="_blank"> Thỏa Thuận và Chính Sách</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="footer">
+      <div class="footer-top">
+        <div class="container canal-v">
+          <div class="grid-x">
+            <div class="cell medium-6 large-6 footer-left">
+              <div class="brand brand-footer"><a href="https://vieon.vn" class="logo logo-footer"
+                  style="margin-top:0"><img src="https://static.vieon.vn/vieon-payment/assets/img/logo.svg"
+                    alt="VieON"></a>
+                <div class="support-switchboard"></div>
+              </div>
+              <div class="brand brand-footer"><a class="logo logo-mit" href="http://online.gov.vn/Home/WebDetails/58364"
+                  target="_blank" title="Đã thông báo Bộ Công Thương"><img
+                    src="https://static.vieon.vn/vieon-payment/assets/img/logo-mit.svg" alt="Bộ công thương"></a></div>
+            </div>
+            <div class="cell medium-6 large-6 footer-right">
+              <div class="grid-x grid-margin-x align-right">
+                <div class="cell medium-shrink">
+                  <ul class="vertical menu menu-footer">
+                    <li class="title">Quy định</li>
+                    <li><a href="https://vieon.vn/dieu-khoan-su-dung" title="Điều khoản sử dụng">Điều khoản sử dụng</a>
+                    </li>
+                    <li><a href="https://vieon.vn/thoa-thuan-va-chinh-sach" title="Chính Sách Và Quy Định Chung">Chính
+                        Sách Và Quy Định Chung</a></li>
+                    <li><a href="https://vieon.vn/chinh-sach-quyen-rieng-tu" title="Chính Sách Về Quyền Riêng Tư">Chính
+                        Sách Về Quyền Riêng Tư</a></li>
+                    <li><a href="https://vieon.vn/ban-quyen" title="Chính Sách Về Sở Hữu Trí Tuệ">Chính Sách Về Sở Hữu
+                        Trí Tuệ</a></li>
+                  </ul>
+                </div>
+                <div class="cell medium-shrink">
+                  <ul class="vertical menu menu-footer">
+                    <li class="title">Trợ giúp</li>
+                    <li><a title="FAQs" href="https://vieon.vn/cau-hoi-thuong-gap">FAQs</a></li>
+                    <li><a href="mailto:support@vieon.vn?Subject=Trợ%20giúp/Góp%20ý%20về%20website%20VieON"
+                        title="Liên hệ" target="_top">Liên hệ</a></li>
+                    <li><a rel="noreferrer"
+                        href="https://forms.office.com/Pages/ResponsePage.aspx?id=QKxWuRijg0ejR9L30kL-sGpwjEzV_UtCvjXjJLcMRI9UNDRCMUhNN0tVOVhXSzNSWVAyTElNWVROWiQlQCN0PWcu"
+                        title="Báo lỗi" target="_blank">Báo lỗi</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copy">
+        <div class="container canal-v">
+          <div class="grid-x align-middle">
+            <div class="cell small-12 medium-auto">
+              <address>Công ty cổ phần Vie Channel - Địa chỉ: 222 Pasteur, Phường 6, Quận 3, Thành phố Hồ Chí
+                Minh.<br>Email: support@vieon.vn
+                <!-- --> |
+                <!-- -->Hotline: 1800599920<br>Giấy phép Cung cấp Dịch vụ Phát thanh, Truyền hình trả tiền số
+                192/GP-BTTTT cấp ngày 07/5/2020.</address>
+            </div>
+            <div class="cell small-12 medium-shrink">
+              <div class="download download-footer">
+                <div class="grid-x align-middle align-center">
+                  <div class="cell medium-shrink"><span class="download-label">Tải ứng dụng VieON tại</span></div>
+                  <div class="cell small-4 medium-auto"><a class="link-down link-down-ios "
+                      href="https://itunes.apple.com/us/app/id1357819721" target="_blank" rel="noreferrer"><img
+                        src="https://static.vieon.vn/vieon-payment/assets/img/apple_stores.svg"
+                        alt="Tải ứng dụng VieON cho iOs"></a></div>
+                  <div class="cell small-4 medium-auto"><a target="_blank" rel="noreferrer"
+                      href="https://play.google.com/store/apps/details?id=vieon.phim.tv"
+                      class="link-down link-down-android p-r" style="background-image:unset"><img
+                        src="https://static.vieon.vn/vieon-payment/assets/img/google_play.svg"
+                        alt="Tải ứng dụng VieON cho Android"></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="splash-hide">
+      <div class="splash splash-full">
+        <div class="splash-inner"><a href="/" class="logo"><img
+              src="https://static.vieon.vn/vieon-payment/assets/img/vieon_logo_slogan.svg" alt="VieON"></a></div>
+      </div>
+    </div>
+    <div class="modal-overlay">
+      <div class="modal middle " data-modal="true" data-animation-in="fade" data-animation-out="fade"
+        style="max-width: 1000px;">
+        <div class="modal-wrapper">
+          <div class="modal-header "></div>
+          <div class="modal-body">
+            <div>
+              <picture>
+                <source media="(max-width: 650px)"
+                  srcset="https://static.vieon.vn/vieon-images/mweb_payment_promotion_vn-pay.png"><img
+                  src="https://static.vieon.vn/vieon-images/web_payment_promotion_vn-pay.png" alt="VNPAY PROMOTION">
+              </picture>
+              <div class="button-group absolute left right bottom align-center"><button
+                  class="button height-40 primary">Đóng</button></div>
+            </div>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+    <div class="Toastify"></div>
+  </div>
+  <script id="__NEXT_DATA__" type="application/json">
+    {"props":{"isServer":true,"initialState":{"Payment":{},"Modal":{},"User":{},"Notify":{}},"initialProps":{"layoutProps":{},"pageProps":{}}},"page":"/","query":{},"buildId":"HnnZ9_LfpoZy4oPSj3qPk","assetPrefix":"https://static.vieon.vn/vieon-payment"}
+  </script>
+  <script nomodule=""
+    src="https://static.vieon.vn/vieon-payment/_next/static/runtime/polyfills-0638c93e5165546c7715.js"></script>
+  <script async="" data-next-page="/"
+    src="https://static.vieon.vn/vieon-payment/_next/static/HnnZ9_LfpoZy4oPSj3qPk/pages/index.js"></script>
+  <script async="" data-next-page="/_app"
+    src="https://static.vieon.vn/vieon-payment/_next/static/HnnZ9_LfpoZy4oPSj3qPk/pages/_app.js"></script>
+  <script src="https://static.vieon.vn/vieon-payment/_next/static/runtime/webpack-91b117697e716c22a78b.js"
+    async=""></script>
+  <script src="https://static.vieon.vn/vieon-payment/_next/static/chunks/framework.8ab6d68b33791ddd3107.js"
+    async=""></script>
+  <script src="https://static.vieon.vn/vieon-payment/_next/static/chunks/commons.05d2214b01ccf402641b.js"
+    async=""></script>
+  <script
+    src="https://static.vieon.vn/vieon-payment/_next/static/chunks/d2fa5d65c1271c0701cc2b9fd96b18ee6afaa6a2.3890d355b02b0c63e046.js"
+    async=""></script>
+  <script src="https://static.vieon.vn/vieon-payment/_next/static/runtime/main-84cba88b662cb351ab5f.js"
+    async=""></script>
+  <script
+    src="https://static.vieon.vn/vieon-payment/_next/static/chunks/0d16476db2e7e356e6be5e2a1a28ab061b441469.d652d79220e52389f344.js"
+    async=""></script>
+  <script src="https://static.vieon.vn/vieon-payment/_next/static/HnnZ9_LfpoZy4oPSj3qPk/_buildManifest.js"
+    async=""></script>
+
+</body>
+
+</html>

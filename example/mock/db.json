@@ -1,0 +1,93 @@
+{
+  "tags-changes": {
+    "changes_hashed": "54b0c58c7ce9f2a8b551351102ee0952"
+  },
+  "tags-pages": {
+    "container_id": "30f9dbdc-7fb9-40a6-b866-5dc4de8baca3",
+    "changes_hashed": "54b0c58c7ce9f2a8b551351102ee0952",
+    "pages": [
+      {
+        "name": "Home page",
+        "url": "http://localhost:9080/vieon/cam-y-chi-ha-tap-19.html",
+        "source": "web",
+        "events": [
+          {
+            "type": "page",
+            "params": {
+              "category": "Sample",
+              "name": "Home page"
+            }
+          },
+          {
+            "type": "trackXHR",
+            "endpoint": "https://api.vieon.vn/backend/cm/v3/tracking/watch?platform=web",
+            "params": {
+              "actions": [
+                {
+                  "type": "track",
+                  "params": {
+                    "event": "Watch video",
+                    "properties": {
+                      "movie": "content_info.movie.title",
+                      "title": "content_info.title"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Next home page",
+        "url": "http://localhost:3000/",
+        "source": "web",
+        "events": [
+          {
+            "type": "page",
+            "params": {
+              "category": "Sample"
+            }
+          },
+          {
+            "type": "trackXHR",
+            "endpoint": "http://localhost:3004/posts",
+            "params": {
+              "actions": [
+                {
+                  "type": "track",
+                  "params": {
+                    "event": "Post title",
+                    "properties": {
+                      "title": "posts[0].title"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "posts": {
+    "posts": [
+      {
+        "id": 1,
+        "title": "post 1"
+      },
+      {
+        "id": 2,
+        "title": "post 2"
+      },
+      {
+        "id": 3,
+        "title": "post 3"
+      },
+      {
+        "id": 4,
+        "title": "post 4"
+      }
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>Example 2</title>
+
+    <script type="text/javascript">
+      // Create a queue to push events and stub all methods
+      window.AicactusSDK || (window.AicactusSDK = {});
+
+      // Load analytics.js after everything else
+      AicactusSDK.load = function (callback) {
+        var script = document.createElement('script');
+        script.async = true;
+        script.type = 'text/javascript';
+
+        // for production
+        // script.src = "https://cdn.aicactus.io/aicactus-sdk.min.js?t=" + Date.now();
+
+        // for local
+        script.src = 'http://localhost:9081/aicactus-sdk.js';
+
+        if (script.addEventListener) {
+          script.addEventListener(
+            'load',
+            function (e) {
+              if (typeof callback === 'function') {
+                callback(e);
+              }
+            },
+            false,
+          );
+        } else {
+          // IE8
+          script.onreadystatechange = function () {
+            if (this.readyState == 'complete' || this.readyState == 'loaded') {
+              callback(window.event);
+            }
+          };
+        }
+        let firstScript = document.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(script, firstScript);
+      };
+
+      AicactusSDK.load(function () {
+        // Initialize the library
+        AicactusSDK.initialize({
+          containerId: 'b8a3ccf2-5d49-4912-b2cc-87dc46e10277',
+        });
+        AicactusSDK.callMethodsFromContainer();
+      });
+    </script>
+  </head>
+
+  <body>
+    <p>This is a very simple HTML document</p>
+    <p>It only has two paragraphs</p>
+    <form>
+      <button type="button">Click me</button>
+    </form>
+  </body>
+</html>

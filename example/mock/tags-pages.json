@@ -1,0 +1,292 @@
+{
+  "container_id": "a09cc71f-08ba-4651-9557-af0c70938b14",
+  "changes_hashed": "54b0c58c7ce9f2a8b551351102ee0956",
+  "pages": [
+    {
+      "name": "Home page",
+      "url": "http://localhost:9080/sample.html",
+      "bases": [
+        {
+          "type": "page",
+          "params": {
+            "category": "Sample",
+            "name": "Home page",
+            "properties": {},
+            "options": {},
+            "callback": null
+          }
+        },
+        {
+          "type": "pageview",
+          "params": {
+            "url": "http://localhost:9080/sample.html"
+          }
+        },
+        {
+          "type": "track",
+          "params": {
+            "event": "play video",
+            "properties": {
+              "content_id": "javascript:__NEXT_DATA__.props.initialState.DetailResults.GET_CONTENT_EPISODE.id",
+              "content_title": "javascript:__NEXT_DATA__.props.initialState.DetailResults.GET_CONTENT_EPISODE.title",
+              "content_type": "episode",
+              "video_play_type": "AVOD",
+              "video_season_name": "javascript:__NEXT_DATA__.props.initialState.DetailResults.GET_CONTENT.title",
+              "menu": "xpath:/html/body/form/button"
+            },
+            "options": {},
+            "callback": null
+          }
+        },
+        {
+          "type": "trackForm",
+          "params": {
+            "forms": {},
+            "event": "trackForm event",
+            "properties": {}
+          }
+        },
+        {
+          "type": "trackLink",
+          "params": {
+            "links": {},
+            "event": "trackLink event",
+            "properties": {}
+          }
+        },
+        {
+          "type": "trackSubmit",
+          "params": {
+            "forms": {},
+            "event": "trackSubmit event",
+            "properties": {}
+          }
+        },
+        {
+          "type": "trackClick",
+          "params": {
+            "links": {},
+            "event": "trackClick event",
+            "properties": {}
+          }
+        },
+        {
+          "type": "identify",
+          "params": {
+            "traits": {},
+            "options": {},
+            "callback": null
+          }
+        },
+        {
+          "type": "group",
+          "params": {
+            "traits": {},
+            "options": {},
+            "callback": null
+          }
+        },
+        {
+          "type": "alias",
+          "params": {
+            "to": "To alias",
+            "from": "From alias",
+            "options": {},
+            "callback": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "Home page 002",
+      "url": "http://localhost:9080/sample2.html",
+      "bases": [
+        {
+          "type": "page",
+          "params": {
+            "category": "Sample",
+            "name": "Home page 002",
+            "properties": {},
+            "options": {},
+            "callback": null
+          }
+        },
+        {
+          "type": "pageview",
+          "params": {
+            "url": "http://localhost:9080/sample2.html"
+          }
+        },
+        {
+          "type": "track",
+          "name": "XHR request",
+          "params": {
+            "fieldName": {
+              "type": "xhrHook",
+              "endpoint": "http://domain.com/myapi",
+              "actions": [
+                {
+                  "method": "track",
+                  "params": {
+                    "properties": {
+                      "field1": "$request.data.field1",
+                      "field2": "$request.data.myField2"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "trackForm",
+          "params": {
+            "forms": {},
+            "event": "trackForm event",
+            "properties": {}
+          }
+        },
+        {
+          "type": "trackLink",
+          "params": {
+            "links": {},
+            "event": "trackLink event",
+            "properties": {}
+          }
+        },
+        {
+          "type": "trackSubmit",
+          "params": {
+            "forms": {},
+            "event": "trackSubmit event",
+            "properties": {}
+          }
+        },
+        {
+          "type": "trackClick",
+          "params": {
+            "links": {},
+            "event": "trackClick event",
+            "properties": {}
+          }
+        },
+        {
+          "type": "identify",
+          "params": {
+            "traits": {},
+            "options": {},
+            "callback": null
+          }
+        },
+        {
+          "type": "group",
+          "params": {
+            "traits": {},
+            "options": {},
+            "callback": null
+          }
+        },
+        {
+          "type": "alias",
+          "params": {
+            "to": "To alias",
+            "from": "From alias",
+            "options": {},
+            "callback": null
+          }
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:9080/vieon/hai-duong-trong-gio.html",
+      "bases": [
+        {
+          "type": "page",
+          "params": {
+            "properties": {},
+            "options": {},
+            "callback": null
+          }
+        },
+        {
+          "type": "trackLink",
+          "params": {
+            "links": "element://*[@id='topBarRight']/ul/li[1]/button",
+            "event": "Clicked button event",
+            "properties": {
+              "plan": "Enterprise"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:9080/vieon/payment.html",
+      "bases": [
+        {
+          "type": "page",
+          "params": {
+            "properties": {},
+            "options": {},
+            "callback": null
+          }
+        },
+        {
+          "type": "track",
+          "params": {
+            "event": "check out started",
+            "properties": {},
+            "options": {},
+            "callback": null
+          }
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:9080/vieon/cam-y-chi-ha-tap-19.html",
+      "bases": [
+        {
+          "type": "page",
+          "params": {
+            "properties": {},
+            "options": {},
+            "callback": null
+          }
+        },
+        {
+          "type": "track",
+          "params": {
+            "event": "login",
+            "properties": {},
+            "options": {},
+            "callback": null,
+            "links": "element://*[@id='__next']/div[1]/div/div/div[2]/form/button"
+          }
+        },
+        {
+          "type": "trackXHR",
+          "name": "XHR request",
+          "params": {
+            "xhr": {
+              "type": "xhrHook",
+              "endpoint": "https://api.vieon.vn/backend/user/login/mobile?platform=web",
+              "actions": [
+                {
+                  "method": "track",
+                  "params": {
+                    "properties": {
+                      "field1": "$request.data.field1",
+                      "field2": "$request.data.myField2"
+                    }
+                  }
+                }
+              ]
+            },
+            "event": "login success",
+            "properties": {}
+          }
+        }
+      ]
+    }
+  ]
+}

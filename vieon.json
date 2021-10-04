@@ -1,0 +1,123 @@
+{
+  "id": "b8a3ccf2-5d49-4912-b2cc-87dc46e10277",
+  "pages": [
+    {
+      "name": "Trang chủ",
+      "url": "https://staging.vieon.vn/",
+      "page_type_id": 123,
+      "bases": [
+        {
+          "type": "page",
+          "params": {
+            "name": "VieON - Không Thể Rời Mắt",
+            "properties": {},
+            "options": {},
+            "callback": null
+          }
+        },
+        {
+          "type": "track",
+          "params": {
+            "event": "play video",
+            "properties": {
+              "content_id": "javascript:__NEXT_DATA__.props.initialState.DetailResults.GET_CONTENT_EPISODE.id",
+              "content_title": "javascript:__NEXT_DATA__.props.initialState.DetailResults.GET_CONTENT_EPISODE.title",
+              "content_type": "episode",
+              "video_play_type": "AVOD",
+              "video_season_name": "javascript:__NEXT_DATA__.props.initialState.DetailResults.GET_CONTENT.title",
+              "menu": "xpath:/html/body/form/button"
+            },
+            "options": {},
+            "callback": null
+          }
+        },
+        {
+          "type": "trackForm",
+          "params": {
+            "forms": {},
+            "event": "trackForm event",
+            "properties": {}
+          }
+        },
+        {
+          "type": "trackLink",
+          "params": {
+            "links": {},
+            "event": "trackLink event",
+            "properties": {}
+          }
+        },
+        {
+          "type": "trackSubmit",
+          "params": {
+            "forms": {},
+            "event": "trackSubmit event",
+            "properties": {}
+          }
+        },
+        {
+          "type": "trackClick",
+          "params": {
+            "links": {},
+            "event": "trackClick event",
+            "properties": {}
+          }
+        },
+        {
+          "type": "identify",
+          "params": {
+            "traits": {},
+            "options": {},
+            "callback": null
+          }
+        }
+      ]
+    },
+    {
+      "name": "View video details",
+      "url": "https://vieon.vn/*/*/*",
+      "page_type_id": 123,
+      "bases": [
+        {
+          "type": "track",
+          "params": {
+            "event": "play video",
+            "properties": {
+              "content_id": "javascript:__NEXT_DATA__.props.initialState.DetailResults.GET_CONTENT_EPISODE.id",
+              "content_title": "javascript:__NEXT_DATA__.props.initialState.DetailResults.GET_CONTENT_EPISODE.title",
+              "content_type": "episode",
+              "video_play_type": "AVOD",
+              "video_season_name": "javascript:__NEXT_DATA__.props.initialState.DetailResults.GET_CONTENT.title"
+            },
+            "options": {},
+            "callback": null
+          }
+        },
+        {
+          "type": "trackLink",
+          "params": {
+            "event": "pause video",
+            "links": "element://*[@id=\"PLAYER_CONTAINER\"]/div[3]/div[3]/div[2]/button[1]",
+            "properties": {}
+          }
+        },
+        {
+          "type": "trackLink",
+          "params": {
+            "event": "like video",
+            "links": "element://*[@id=\"__next\"]/main/section[1]/div/div[2]/div[1]/div[2]/div[1]/div[2]/div/button[2]",
+            "properties": {}
+          }
+        },
+        {
+          "type": "trackLink",
+          "params": {
+            "event": "comment video",
+            "links": "element://*[@id=\"__next\"]/main/section[1]/div/div[2]/div[1]/div[2]/div[1]/div[2]/div/button[1]",
+            "properties": {}
+          }
+        }
+      ]
+    }
+  ]
+}
